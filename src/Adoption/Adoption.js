@@ -3,7 +3,7 @@ import ApiService from '../Api-Service/Api-Services';
 
 class Adoption extends Component {
     state = {
-        dog: null,
+        dog: [],
         cat: null,
         user: 'You',
         currentUser: ''
@@ -11,23 +11,33 @@ class Adoption extends Component {
 
     componentDidMount(){
         ApiService.getCurrentDog()
-            .then( dog => {
+        .then( res => {
+            //console.log(res);
                 this.setState({
-                    dog
+                    dog: res //Object.entries(dog)
                 })
             })
+
     }
 
     renderDog() {
+        let dogName = this.state.dog.name;
+        let imgDog = this.state.dog.imageURL;
+        if(!dogName){
+            dogName = '';
+        }
+        console.log(dogName)
         return (
-            <>
-                <h4>{this.state.dog.name}</h4>
-            </>
+            <div>
+                <h4>Name: {dogName}</h4>
+                <img src={imgDog} alt='dog'></img>
+                
+            </div>
         )
     }
 
     render() {
-        console.log(this.state.dog)
+        //console.log(this.state.dog)
         return (
             <div>Adoption
                 {this.renderDog()}
