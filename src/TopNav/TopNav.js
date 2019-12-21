@@ -5,7 +5,7 @@ class TopNav extends Component {
         return(
             <div className='nav'>
                 <Link to='/'>Petful</Link>
-                <h1> FIFO Adoption Agency</h1>
+                <h1> FIFO Adoption Ag<i class="fas fa-paw"></i>ncy</h1> 
             </div>
         )
     }

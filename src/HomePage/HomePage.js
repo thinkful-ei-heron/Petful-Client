@@ -8,9 +8,10 @@ class HomePage extends Component {
                 <h1> Welcome to Petful, an agency where you can adopt an animal.</h1>
                 
                 <h2> Adoption Process</h2>
-                <p>Step 1: Press the start adopting button below to enter to the adoption page </p>
+                <p>Step 1: Press the 'Start Adopting!' button below to enter to the adoption page </p>
                 <p>Step 2: Wait for the website to load the information of the pets ready for adoption </p>
-                <p>Step 3: Rule: It's a First Come First Serve! This not only work for people who want to adopt, but also in our animal list.</p>
+                <p>Step 3: It's a First Come First Serve! This not only works for people who want to adopt, but also in our animal list.</p>
+                
                 <Link to= '/adopt'>
                     <button type='button'>Start Adopting!</button>
                 </Link>

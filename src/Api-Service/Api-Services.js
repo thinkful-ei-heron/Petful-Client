@@ -61,6 +61,20 @@ const ApiServices = {
             )
         
     },
+    removeUser() {
+        return fetch(`${config.API_ENDPOINT}/user` ,
+        {
+            method: 'DELETE',
+            headers: {
+                'content-type' : 'application/json'
+        }})
+            .then( res=> 
+                (!res.ok)
+                ? res.json().then(e=> Promise.reject(e))
+                : res.json()
+            )
+        
+    },
 }
 
 export default ApiServices;
